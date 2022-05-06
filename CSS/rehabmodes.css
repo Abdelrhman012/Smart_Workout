@@ -1,0 +1,154 @@
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width : 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width : 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+:root {
+    --yellow: #f8ac40;
+    --light-grey: #e6e6e7;
+    --grey: #606060;
+    --dark-grey: #232020;
+    --border-radius: 20px
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-image: linear-gradient(45deg, var(--dark-grey), black);
+    background-size: cover;
+    width: 100vw;
+    height: calc(100vh - 10px);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.sp-header {
+    color: var(--light-grey);
+    font-weight: 800;
+    font-size: 90px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.sp-subheader {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 15px;
+    color: var(--yellow);
+    margin-top: -35px;
+    margin-bottom: 50px;
+    background-color: var(--dark-grey);
+    padding: 8px;
+    border-radius: var(--border-radius);
+}
+
+/* #################################################################################### */
+
+.rehab-wallsit-card {
+    background-image: url("../images/wallsit.jpg");
+    background-size: cover;
+    height: 100%;
+    border-radius: var(--border-radius);
+}
+
+.rehab-wallsit-card-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background-color: white;
+    color: var(--dark-grey);
+}
+
+.rehab-pelviclift-card {
+    background-image: url(../images/Pelviclift.jpg);
+    background-size: cover;
+    background-color: white;
+    height: 100%;
+    background-position-x: 40%;
+    border-radius: var(--border-radius);
+    }
+
+.rehab-pelviclift-card-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background-color: white;
+    color: var(--dark-grey);
+}
+
+.rehab-bendover-card {
+background-image: url(../images/bendover.jpg);
+background-size: cover;
+background-color: white;
+height: 100%;
+background-position-x: 40%;
+border-radius: var(--border-radius);
+}
+
+.rehab-bendover-card-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background-color: white;
+    color: var(--dark-grey);
+}
+
+.gym-freemode-mode {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background-color: white;
+    color: var(--dark-grey);
+}
+
+.gym-challengesmode-mode {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background-color: white;
+    color: var(--dark-grey);
+}
+
+@media (max-width : 767px) {
+    .sp-header {
+        font-size: 40PX;
+        margin-bottom: 20px;
+    }
+    .rehab-bendover-card {
+        background-position-y: 112%;
+    }
+    .rehab-pelviclift-card {
+        background-position-y: -50px;
+    }
+}

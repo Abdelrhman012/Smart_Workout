@@ -1,0 +1,235 @@
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width : 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width : 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+:root {
+    --yellow: #f8ac40;
+    --light-grey: #e6e6e7;
+    --grey: #606060;
+    --dark-grey: #232020;
+    --border-radius: 20px
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-image: linear-gradient(45deg, var(--dark-grey), black);
+    background-size: cover;
+    width: 100vw;
+    height: calc(100vh - 10px);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.sp-header {
+    color: var(--light-grey);
+    font-weight: 800;
+    font-size: 90px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.sp-subheader {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 15px;
+    color: var(--yellow);
+    margin-top: 35px;
+    margin-bottom: 50px;
+    background-color: var(--dark-grey);
+    padding: 8px;
+    border-radius: var(--border-radius);
+}
+
+/* #################################################################################### */
+.container .cards {
+    margin-top: 9% !important;
+}
+
+.container .cards .card{
+    background-color: white;
+    height: 120px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.container .card img{
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    width: 100%;
+}
+
+.container .card .gymChallengesModeCard-Text{
+    text-align: center;
+    user-select: none;
+}
+
+.container .cards .card:hover {
+    background-color: var(--dark-grey);
+    color: var(--yellow);
+}
+
+.container .card .gymChallengesModeCard-Text h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.container .card .gymChallengesModeCard-Text p{
+    margin-top: 0;
+    filter: blur(1.5px);
+    padding: var(--border-radius);
+    padding-top: 0;
+    font-size: 14px;
+}
+
+.container .cards .card:hover p{
+    filter: blur(0);
+}
+
+.hide{
+    display: none;
+    transition: 0.3s;
+}
+
+.display-card{
+    transition: 0.3s;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    height: 640px !important;
+    margin-top: 30px;
+    cursor: default !important;
+    filter: grayscale(0) !important;
+}
+
+.display-card .gymChallengesModeCard-Text{
+    margin: 10px;
+    position: relative;
+}
+
+.display-card .gymChallengesModeCard-Text h2{
+    margin: 0px !important;
+    background-color: var(--yellow);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.display-card .gymChallengesModeCard-Text p{
+    display: none;
+}
+
+.display-card:hover{
+    background-color: white !important;
+    color: var(--dark-grey)  !important;
+}
+
+.container .display-card .gymChallengesModeCard-image{
+    background-color: var(--dark-grey);
+    margin: 10px;
+    border-radius: var(--border-radius) ;
+}
+
+.container .display-card img{
+    filter: grayscale(100%) !important;
+    border-radius: 0 !important ;
+    margin-top: 30%;
+}
+
+.startExcersize-btn{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 55px;
+    width: 200px;
+}
+.backExcersize-btn{
+    background-color: transparent;
+    color: var(--dark-grey);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+    width: 200px;
+}
+
+.backExcersize-btn:hover{
+    background-color: transparent;
+}
+
+.container .display-card .timer-box {
+    font-size: 40px;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .display-card .timerboxtext {
+    font-size: 20px;
+} 
+
+ @media (max-width : 767px) {
+    .display-card{
+        margin-top: 42px !important;
+        height: 750px !important;
+    }
+
+    .container .display-card .gymChallengesModeCard-image {
+        background-color: transparent;
+        margin: 10px;
+        border-radius: var(--border-radius);
+        height: 200px;
+    }
+    .container .display-card img {
+        filter: grayscale(100%) !important;
+        border-radius: 0 !important;
+        margin-top: 0px;
+        border-radius: var(--border-radius) !important;
+    }
+    .display-card .gymChallengesModeCard-Text {
+        margin: 10px;
+        height: 500px;
+        position: relative;
+    }
+    .startExcersize-btn {
+        position: absolute;
+        bottom: 0;
+        left: 48%;
+        transform: translateX(-50%);
+        margin-bottom: 55px;
+        width: 200px;
+    }
+    
+    .backExcersize-btn {
+        background-color: transparent;
+        color: var(--dark-grey);
+        position: absolute;
+        bottom: 0;
+        left: 48%;
+        transform: translateX(-50%);
+        margin-bottom: 0;
+        width: 200px;
+    }
+}

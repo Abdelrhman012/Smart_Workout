@@ -1,0 +1,100 @@
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width : 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width : 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+:root {
+    --yellow: #f8ac40;
+    --light-grey: #e6e6e7;
+    --grey: #606060;
+    --dark-grey: #232020;
+    --border-radius: 20px
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-image: linear-gradient(45deg, var(--dark-grey), black);
+    background-size: cover;
+    width: 100vw;
+    height: calc(100vh - 10px);
+    transition: 0.3s;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: var(--yellow);
+    color: var(--dark-grey);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button:hover {
+    background-color: var(--dark-grey);
+    color: var(--yellow);
+}
+
+.sp-header {
+    color: var(--light-grey);
+    font-weight: 800;
+    font-size: 90px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.sp-subheader {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 15px;
+    color: var(--yellow);
+    margin-top: -35px;
+    margin-bottom: 50px;
+    background-color: var(--dark-grey);
+    padding: 8px;
+    border-radius: var(--border-radius);
+}
+/* #################################################################################### */
+
+.name{
+    color: white;
+    font-weight: 500;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+}
+
+@media (max-width : 767px) {
+    .sp-header {
+        font-size: 70PX;
+        margin-bottom: 20px;
+    }
+}
