@@ -188,7 +188,7 @@ body {
 .startExcersize-btn{
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 47%;
     transform: translateX(-50%);
     margin-bottom: 55px;
     width: 200px;
@@ -198,13 +198,29 @@ body {
     color: var(--dark-grey);
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 47%;
     transform: translateX(-50%);
     margin-bottom: 0;
     width: 200px;
 }
 
 .backExcersize-btn:hover{
+    background-color: transparent;
+}
+
+.stopExcersize-btn{
+    background-color: transparent;
+    color: var(--dark-grey);
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+    width: 200px;
+    display: none;
+}
+
+.stopExcersize-btn:hover{
     background-color: transparent;
 }
 

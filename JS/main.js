@@ -18,6 +18,9 @@ menuButtonns.forEach((ele) => {
 
 let logoButton = document.querySelector(".logo")
 let startButton = document.querySelector(".start-btn")
+let startExcersize = document.querySelector(".startExcersize-btn")
+let backExcersize = document.querySelector(".backExcersize-btn")
+let stopExcersize = document.querySelector(".stopExcersize-btn")
 let gymMode = document.querySelector(".mainModes-gym-mode")
 let gymFreeMode = document.querySelector("gym-freemode-mode")
 
@@ -63,7 +66,6 @@ document.querySelectorAll(".cards .card").forEach(card => {
         let name = card.getAttribute("data-exercise")
         displayCard.forEach(display => {
             let details = display.getAttribute("data-card")
-            console.log(display)
             if (name === details) {
                 display.classList.add('active');
             }
@@ -78,9 +80,36 @@ displayCard.forEach(close => {
     };
 })
 
+
 displayCard.forEach(start => {
     start.querySelector('.startExcersize-btn').onclick = () =>{
-    start.classList.remove('active');
-    displayCards.style.display = 'none';
+        let timer = document.querySelector(".timer");
+        let timerBox = document.querySelector(".counter");
+        let counter = setInterval(countdown, 1000);
+        function countdown() {
+        timer.innerHTML -= 1;
+        startExcersize.style.display = "none"
+        backExcersize.style.display = "none"
+        stopExcersize.style.display = "block"
+        if (timer.innerHTML === "0") {
+            clearInterval(counter);
+            timerBox.style.display = "none";
+            timer.innerHTML = 10
+            }
+            document.addEventListener("click", function (e) {
+                if (e.target.classList.contains("stopExcersize-btn")) {
+                    clearInterval(counter);
+                    displayCards.style.display = 'none';
+                    startExcersize.style.display = "block"
+                    backExcersize.style.display = "block"
+                    stopExcersize.style.display = "none"
+                    timer.innerHTML = 10
+                    timerBox.style.display = "block";
+
+                }
+            })
+        }
     };
 })
+
+
