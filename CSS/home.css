@@ -203,7 +203,7 @@ body {
         position: absolute;
         right: 0px;
         top: calc(100% + 14px);
-        min-width: 200px;
+        min-width: 170px;
         display: none;
     }
 
@@ -254,6 +254,7 @@ body {
     
     .header .container .links:hover ul.menu {
         display: inline-block;
+        width: 170px !important;
     }
     
     .header .container .links:hover ul.menu::before {
@@ -269,7 +270,7 @@ body {
         position: absolute;
         right: 100%;
         top: 0;
-        min-width: 200px;
+        min-width: 170px;
         display: block;
     }
     
@@ -293,7 +294,7 @@ body {
         position: absolute;
         right: 100%;
         top: 0;
-        min-width: 200px;
+        min-width: 170px;
         display: none;
     }
     

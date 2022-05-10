@@ -29,14 +29,14 @@
             </span>
             <ul class="menu">
                 <li class="gym menuButton">
-                    <a href="#gym">GYM Mode</a>
+                    <a href="#">GYM Mode</a>
                     <ul class="sub">
                         <li><a href="../HTML/gymFreeMode.html" class="gym-free">Free Mode</a></li>
                         <li><a href="../HTML/challenges.html" class="gym-challenge">Challenges Mode</a></li>
                     </ul>
                 </li>
                 <li class="rehab menuButton">
-                    <a href="#rehab">Rehabilitation Mode</a>
+                    <a href="#">Rehabilitation Mode</a>
                     <ul class="sub">
                         <li><a href="../HTML/wallsitChallenges.html" class="rehab-ill1">Wall Sit</a></li>
                         <li><a href="../HTML/pelviclift.html" class="rehab-ill2">Pelvic Lift</a></li>
@@ -54,7 +54,7 @@
     <div class="container">
         <p class="sp-subheader">SELECT YOUR EXERCISE</p>
         <div class="cards">
-            <div class="card free-excercise">
+            <div class="card free-excercise" data-exercise = "push-up">
                 <div class="gymFreeModeCard-image">
                     <img src="../images/push up.jpg" alt="">
                 </div>
@@ -65,7 +65,7 @@
                     Key secondary muscle : Triceps.</p>
                 </div>
             </div>
-            <div class="card free-excercise">
+            <div class="card free-excercise" data-exercise="running">
                 <div class="gymFreeModeCard-image">
                     <img src="../images/running.jpg" alt="">
                 </div>
@@ -75,7 +75,7 @@
                     considered as efficient way for burning calories.</p>
                 </div>
             </div>
-            <div class="card free-excercise">
+            <div class="card free-excercise" data-exercise = "skipping">
                 <div class="gymFreeModeCard-image">
                     <img src="../images/skip.png" alt="">
                 </div>
@@ -85,7 +85,7 @@
                     considered as efficient way for burning calories.</p>
                 </div>
             </div>
-            <div class="card free-excercise">
+            <div class="card free-excercise" data-exercise="plank">
                 <div class="gymFreeModeCard-image">
                     <img src="../images/plank.png" alt="">
                 </div>
@@ -95,7 +95,7 @@
                     considered as efficient way for burning calories.</p>
                 </div>
             </div>
-            <div class="card free-excercise">
+            <div class="card free-excercise" data-exercise = "deadlift">
                 <div class="gymFreeModeCard-image">
                     <img src="../images/dead.png" alt="">
                 </div>
@@ -106,7 +106,7 @@
                     Key secondary muscle : Lower back.</p>
                 </div>
             </div>
-            <div class="card free-excercise">
+            <div class="card free-excercise" data-exercise = "biceps-curls">
                     <div class="gymFreeModeCard-image">
                         <img src="../images/bi.png" alt="">
                     </div>
@@ -116,6 +116,96 @@
                         Priamry activated muscle : Biceps <br>
                         Key secondary muscle : Forearm & Wrist.</p>
                     </div>
+            </div>
+        </div>
+        <div class="display-cards">
+            <div class="display-card push-up" data-card="push-up">
+                <div class="gymFreeModeDisplayCard-image">
+                    <img src="../images/push up.jpg" alt="">
+                </div>
+                <div class="gymFreeModeDisplayCard-Text">
+                    <h1>Push Up</h1>
+                    <div class="counter">
+                        <h1>Will Start in</h1>
+                        <h1 class="timer">10</h1>
+                    </div>
+                    <div class="button startExcersize-btn">
+                        Start
+                    </div>
+                    <div class="button backExcersize-btn">
+                        Back
+                    </div>
+                </div>
+            </div>
+            <div class="display-card running" data-card="running">
+                <div class="gymFreeModeDisplayCard-image">
+                    <img src="../images/running.jpg" alt="">
+                </div>
+                <div class="gymFreeModeDisplayCard-Text">
+                    <h1>Running</h1>
+                    <div class="button startExcersize-btn">
+                        Start
+                    </div>
+                    <div class="button backExcersize-btn">
+                        Back
+                    </div>
+                </div>
+            </div>
+            <div class="display-card plank" data-card="plank">
+                <div class="gymFreeModeDisplayCard-image">
+                    <img src="../images/plank.png" alt="">
+                </div>
+                <div class="gymFreeModeDisplayCard-Text">
+                    <h1>Plank</h1>
+                    <div class="button startExcersize-btn">
+                        Start
+                    </div>
+                    <div class="button backExcersize-btn">
+                        Back
+                    </div>
+                </div>
+            </div>
+            <div class="display-card plank" data-card="skipping">
+                <div class="gymFreeModeDisplayCard-image">
+                    <img src="../images/skip.png" alt="">
+                </div>
+                <div class="gymFreeModeDisplayCard-Text">
+                    <h1>Skipping</h1>
+                    <div class="button startExcersize-btn">
+                        Start
+                    </div>
+                    <div class="button backExcersize-btn">
+                        Back
+                    </div>
+                </div>
+            </div>
+            <div class="display-card plank" data-card="deadlift">
+                <div class="gymFreeModeDisplayCard-image">
+                    <img src="../images/dead.png" alt="">
+                </div>
+                <div class="gymFreeModeDisplayCard-Text">
+                    <h1>Deadlift</h1>
+                    <div class="button startExcersize-btn">
+                        Start
+                    </div>
+                    <div class="button backExcersize-btn">
+                        Back
+                    </div>
+                </div>
+            </div>
+            <div class="display-card plank" data-card="biceps-curls">
+                <div class="gymFreeModeDisplayCard-image">
+                    <img src="../images/bi.png" alt="">
+                </div>
+                <div class="gymFreeModeDisplayCard-Text">
+                    <h1>Biceps Curls</h1>
+                    <div class="button startExcersize-btn">
+                        Start
+                    </div>
+                    <div class="button backExcersize-btn">
+                        Back
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -94,7 +94,15 @@ body {
 
 @media (max-width : 767px) {
     .sp-header {
-        font-size: 70PX;
+        font-size: 50PX;
         margin-bottom: 20px;
+    }
+    
+    .sp-subheader{
+        font-size: 20px;
+    }
+    
+    .name{
+        font-size: 30px;
     }
 }

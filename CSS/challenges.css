@@ -190,6 +190,22 @@ body {
     font-size: 20px;
 } 
 
+.container .cards .done {
+    background-color: #777;
+    cursor: default; 
+    color: white;
+}
+
+.container .cards .done p{
+    filter: blur(0);
+}
+
+.container .cards .done:hover{
+    background-color: #777;
+    cursor: default;
+    color: white;
+}
+
  @media (max-width : 767px) {
     .display-card{
         margin-top: 42px !important;
