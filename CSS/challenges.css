@@ -112,44 +112,54 @@ body {
     transition: 0.3s;
 }
 
-.display-card{
+.display-cards .display-card{
     transition: 0.3s;
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     height: 640px !important;
     margin-top: 30px;
     cursor: default !important;
-    filter: grayscale(0) !important;
+    width: 70%;
+    display: none;
+    position: relative;
 }
 
-.display-card .gymChallengesModeCard-Text{
+.display-cards .display-card.active {
+    display: grid;
+}
+
+.display-cards .display-card .gymChallengesModeCard-Text{
     margin: 10px;
     position: relative;
 }
 
-.display-card .gymChallengesModeCard-Text h2{
+.display-cards .display-card .counter{
+    position: absolute;
+    margin-top:0%;
+}
+
+.display-cards .display-card .gymChallengesModeCard-Text h2{
     margin: 0px !important;
     background-color: var(--yellow);
     border-radius: 15px;
     padding: 10px;
 }
 
-.display-card .gymChallengesModeCard-Text p{
+.display-cards .display-card .gymChallengesModeCard-Text p{
     display: none;
 }
 
-.display-card:hover{
+.display-cards .display-card:hover{
     background-color: white !important;
     color: var(--dark-grey)  !important;
 }
 
-.container .display-card .gymChallengesModeCard-image{
+.container .display-cards .display-card .gymChallengesModeCard-image{
     background-color: var(--dark-grey);
     margin: 10px;
     border-radius: var(--border-radius) ;
 }
 
-.container .display-card img{
+.container .display-cards .display-card img{
     filter: grayscale(100%) !important;
     border-radius: 0 !important ;
     margin-top: 30%;
@@ -157,11 +167,12 @@ body {
 
 .startExcersize-btn{
     position: absolute;
-    bottom: 0;
+    top: 80%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
     margin-bottom: 55px;
-    width: 200px;
+    width: 300px;
+    height: 60px;
 }
 .backExcersize-btn{
     background-color: transparent;
@@ -172,6 +183,19 @@ body {
     transform: translateX(-50%);
     margin-bottom: 0;
     width: 200px;
+    height: 60px;
+}
+
+.stopExcersize-btn{
+    background-color: transparent;
+    color: var(--dark-grey);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+    width: 200px;
+    height: 60px;
 }
 
 .backExcersize-btn:hover{

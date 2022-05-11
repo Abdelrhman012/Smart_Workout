@@ -18,9 +18,6 @@ menuButtonns.forEach((ele) => {
 
 let logoButton = document.querySelector(".logo")
 let startButton = document.querySelector(".start-btn")
-let startExcersize = document.querySelector(".startExcersize-btn")
-let backExcersize = document.querySelector(".backExcersize-btn")
-let stopExcersize = document.querySelector(".stopExcersize-btn")
 let gymMode = document.querySelector(".mainModes-gym-mode")
 let gymFreeMode = document.querySelector("gym-freemode-mode")
 
@@ -61,15 +58,20 @@ document.addEventListener("click", function (e) {
 let displayCards = document.querySelector(".display-cards")
 let displayCard = displayCards.querySelectorAll(".display-card")
 document.querySelectorAll(".cards .card").forEach(card => {
-    card.onclick = () => {
-        displayCards.style.display = " block"
-        let name = card.getAttribute("data-exercise")
-        displayCard.forEach(display => {
-            let details = display.getAttribute("data-card")
-            if (name === details) {
-                display.classList.add('active');
-            }
-        })
+    if (card.classList.contains("done")) {
+        
+    } else {
+        card.onclick = () => {
+            displayCards.style.display = " block"
+            let name = card.getAttribute("data-exercise")
+            displayCard.forEach(display => {
+                let details = display.getAttribute("data-card")
+                if (name === details) {
+                    display.classList.add('active');
+                    console.log(name)
+                }
+            })
+        }
     }
 })
 
@@ -80,36 +82,69 @@ displayCard.forEach(close => {
     };
 })
 
-
-displayCard.forEach(start => {
-    start.querySelector('.startExcersize-btn').onclick = () =>{
-        let timer = document.querySelector(".timer");
-        let timerBox = document.querySelector(".counter");
-        let counter = setInterval(countdown, 1000);
-        function countdown() {
-        timer.innerHTML -= 1;
-        startExcersize.style.display = "none"
-        backExcersize.style.display = "none"
-        stopExcersize.style.display = "block"
-        if (timer.innerHTML === "0") {
-            clearInterval(counter);
-            timerBox.style.display = "none";
-            timer.innerHTML = 10
-            }
-            document.addEventListener("click", function (e) {
-                if (e.target.classList.contains("stopExcersize-btn")) {
-                    clearInterval(counter);
-                    displayCards.style.display = 'none';
-                    startExcersize.style.display = "block"
-                    backExcersize.style.display = "block"
-                    stopExcersize.style.display = "none"
-                    timer.innerHTML = 10
-                    timerBox.style.display = "block";
-
-                }
-            })
-        }
+displayCard.forEach(close => {
+    close.querySelector('.stopExcersize-btn').onclick = () =>{
+    close.classList.remove('active');
     };
 })
+
+let timerSwitch = false;
+let timer = document.querySelectorAll(".timer");
+document.querySelectorAll(".display-cards .display-card").forEach(displayCard=> {
+    displayCard.addEventListener("click", function (e) {
+        if (e.target.classList.contains("startExcersize-btn")) {
+            let name = displayCard.getAttribute("data-card")
+            timer.forEach(display => { 
+                let timerTime = display.getAttribute("data-timer")
+                let timerBox = document.querySelector(".counter-" + timerTime);
+                let startExcersize = document.querySelector(".startExcersize-btn-" + timerTime)
+                let backExcersize = document.querySelector(".backExcersize-btn-" + timerTime)
+                let stopExcersize = document.querySelector(".stopExcersize-btn-" + timerTime)
+                if (name === timerTime) {
+                    timerSwitch = true
+                    let timerCount = document.querySelector("[data-timer="+ timerTime +"]")
+                    let counter = setInterval(countdown, 1000);
+                    startExcersize.style.display = "none"
+                    backExcersize.style.display = "none"
+                    stopExcersize.style.display = "block"
+                    function countdown() {
+                    timerCount.innerHTML -= 1;
+                    if (timerCount.innerHTML === "0") {
+                        timerCount.innerHTML = 10
+                        timerBox.style.display = "none";
+                        clearInterval(counter);
+                    }
+                    else if (timerSwitch === false) {
+                        timerCount.innerHTML = 10
+                        clearInterval(counter);
+                    }
+                }
+            }
+        })
+        }
+        if (e.target.classList.contains("stopExcersize-btn")) {
+            let name = displayCard.getAttribute("data-card")
+            timer.forEach(display => { 
+            let timerTime = display.getAttribute("data-timer")
+                if (name === timerTime) {
+                let timerBox = document.querySelector(".counter-" + timerTime);
+                let timerCount = document.querySelector("[data-timer="+ timerTime +"]")
+                let startExcersize = document.querySelector(".startExcersize-btn-" + timerTime)
+                let backExcersize = document.querySelector(".backExcersize-btn-" + timerTime)
+                let stopExcersize = document.querySelector(".stopExcersize-btn-" + timerTime)
+                timerCount.innerHTML = 10;
+                startExcersize.style.display = "block"
+                backExcersize.style.display = "block"
+                stopExcersize.style.display = "none"
+                displayCards.style.display = "none"
+                timerBox.style.display = "block";
+                timerSwitch = false
+            }
+        })
+        }
+    })
+})
+
+
 
 

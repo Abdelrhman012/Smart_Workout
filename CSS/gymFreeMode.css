@@ -257,10 +257,23 @@ body {
         margin-top: 0px;
         border-radius: var(--border-radius) !important;
     }
-    .display-card .gymFreeModeDispalyCard-Text {
+    .display-card .gymFreeModeDisplayCard-Text {
         margin: 10px;
         height: 500px;
         position: relative;
+        margin-top: -0% ;
+    }
+    .display-card .gymFreeModeDisplayCard-Text .counter {
+    margin-top: -20%;
+    }
+    .display-card .gymFreeModeDisplayCard-Text .startExcersize-btn {
+    margin-bottom: 50%;
+    }
+    .display-card .gymFreeModeDisplayCard-Text .backExcersize-btn {
+    margin-bottom: 33%;
+    }
+    .display-card .gymFreeModeDisplayCard-Text .stopExcersize-btn {
+    margin-bottom: 33%;
     }
     .startExcersize-btn {
         position: absolute;
